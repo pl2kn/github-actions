@@ -5,6 +5,7 @@ package org.example
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions.*
 
 class AppTest {
     @Test
@@ -12,5 +13,12 @@ class AppTest {
         val classUnderTest = App()
         
         assertNotNull(classUnderTest.greeting, "app should have a greeting")
+    }
+
+    @Test
+    fun checkHelloMethod() {
+        val classUnderTest = App()
+
+        assertEquals("Buy", classUnderTest.sayHello())
     }
 }
